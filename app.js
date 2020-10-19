@@ -1,11 +1,11 @@
 const express = require('express')
+
 const app = express()
 
-const apiv1 = require('./api.v1')
-
+const api = require('./api')
 
 app.use(express.json())
 
-app.use('/api/v1', apiv1)
+app.use('/api', api)
 
 module.exports = app
